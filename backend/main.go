@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"strconv"
+	"time"
 
 	"github.com/gofiber/fiber/v3"
 	"github.com/gofiber/fiber/v3/middleware/rewrite"
@@ -16,7 +17,7 @@ func main() {
 
 	// static assets
 	app.Get("/", static.New("./assets/public/index.html"))
-	app.Use([]string{"/favicon.png", "/favicon.ico"}, static.New("./assets/public/favicon.png"))
+	app.Use("/favicon.ico", static.New("./assets/public/favicon.png"))
 	app.Use("_app", static.New("./assets/public/_app", static.Config{ Compress: true }))
 	
 	// api
@@ -25,15 +26,7 @@ func main() {
 		return c.SendString("Hello, World 👋!")
 	})
 
-	app.Use(
-		[]string{
-			"/*.html", "/*.htm",
-			"/*.ico", "/*.png", "/*.webp", 
-			"/*.js", "/*.css", 
-			"/*.json", "/*.xml",
-		}, 
-		static.New("./assets/public", static.Config{ Compress: true }),
-	)
+	app.Use("/*", static.New("./assets/public", static.Config{ Compress: true }))
 	app.Use(
 		"/*",
 		rewrite.New(rewrite.Config{
@@ -46,7 +39,7 @@ func main() {
 				return false
 			},
 		}),
-		static.New("./assets/public", static.Config{Compress: true}),
+		static.New("./assets/public", static.Config{Compress: true, CacheDuration: 5 * time.Microsecond}),
 	)
 
 	address := config.AppProperty.App.Host + ":" + strconv.Itoa(config.AppProperty.App.Port)
