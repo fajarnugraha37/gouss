@@ -11,10 +11,8 @@ import (
 var AppProperty Property
 
 func init() {
-	err := cleanenv.ReadEnv(&AppProperty)
-	util.FailOnError(err)
-	
-	configLocation := filepath.Join(util.GetCwd(), fmt.Sprintf("config.%s.yaml", AppProperty.Env))
-	err = cleanenv.ReadConfig(configLocation, &AppProperty)
+	env := util.GetEnv("ENV", "dev")
+	configLocation := filepath.Join(util.GetCwd(), fmt.Sprintf("config.%s.yaml", env))
+	err := cleanenv.ReadConfig(configLocation, &AppProperty)
 	util.FailOnError(err)
 }
