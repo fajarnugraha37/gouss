@@ -1,7 +1,7 @@
 <h1 align="center">
   <a href="https://github.com/fajarnugraha37/gouss">
     <picture>
-      <img height="125" alt="Fiber" src="https://raw.githubusercontent.com/fajarnugraha37/gouss/logo.webp">
+      <img height="125" alt="GOUSS" src="https://raw.githubusercontent.com/fajarnugraha37/gouss/refs/heads/main/logo.webp">
     </picture>
   </a>
 </h1>
