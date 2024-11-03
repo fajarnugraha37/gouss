@@ -2,9 +2,12 @@ package main
 
 import (
 	"log"
+    "strconv"
 
 	"github.com/gofiber/fiber/v3"
 	"github.com/gofiber/fiber/v3/middleware/static"
+	
+	"github.com/fajarnugraha37/gouss/config"
 )
 
 func main() {
@@ -17,5 +20,6 @@ func main() {
 		return c.SendString("Hello, World 👋!")
 	})
 
-	log.Fatal(app.Listen(":3000"))
+	address := config.AppProperty.App.Host + ":" + strconv.Itoa(config.AppProperty.App.Port)
+	log.Fatal(app.Listen(address))
 }

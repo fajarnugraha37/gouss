@@ -1,0 +1,8 @@
+app:
+  name: gouss-app
+  profile: dev
+  host: 0.0.0.0
+  port: 8000
+
+database:
+  type: in-memory
