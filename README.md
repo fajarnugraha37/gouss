@@ -1,6 +1,19 @@
-# [WIP] GOUSS
+<h1 align="center">
+  <a href="https://github.com/fajarnugraha37/gouss">
+    <picture>
+      <img alt="GOUSS" src="https://raw.githubusercontent.com/fajarnugraha37/gouss/refs/heads/main/docs/logo.webp">
+    </picture>
+  </a>
+</h1>
+<p align="center">
+    <em><b>GOUSS</b> A simple, reliable URL shortener featuring a cute, friendly mascot. Designed for ease of use, secure URL management, analytics, and integration options. Perfect for developers seeking a streamlined link management tool with personality.
+    </em>
+</p>
 
-GOUSS is a URL shortener application built with Go. This project allows users to create shortened URLs, track their usage, and manage links easily. As the project evolves, features like analytics, user management, and custom domains will enhance the functionality for URL shortening service.
+---
+## ⚠️ **Attention**
+
+This project, GOUSS, is currently under active development and is not yet ready for use.
 
 ## Features
 
