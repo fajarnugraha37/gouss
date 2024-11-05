@@ -50,11 +50,11 @@ This project will evolve from a basic prototype to a real product that can be us
 - [ ]  **API Enhancements**: Add endpoints for retrieving URL statistics and managing expiration settings.
 
 ### Phase 4:
-- [] **Custom Short URLs**: Enable custom aliases for URLs.
-- [] **Containerization**: Dockerize the application for easier deployment.
-- [] **Logging & Monitoring**: Integrate with logging and monitoring solutions.
-- [] **User Accounts & Authentication**: Implement user registration and login with JWT.
-- [] **Notification**: Send notifications for specific actions like URLC creation or deletion.
+- [ ]  **Custom Short URLs**: Enable custom aliases for URLs.
+- [ ]  **Containerization**: Dockerize the application for easier deployment.
+- [ ]  **Logging & Monitoring**: Integrate with logging and monitoring solutions.
+- [ ]  **User Accounts & Authentication**: Implement user registration and login with JWT.
+- [ ]  **Notification**: Send notifications for specific actions like URLC creation or deletion.
 
 ### Phase 5:
 - [ ]  **QR Code Generation**: Automatically generate QR codes for shortened URLs.
