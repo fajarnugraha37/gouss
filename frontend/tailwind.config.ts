@@ -15,6 +15,7 @@ const config: Config = {
 		},
 		extend: {
 			colors: {
+				golangBlue: "#00ADD8",
 				border: "hsl(var(--border) / <alpha-value>)",
 				input: "hsl(var(--input) / <alpha-value>)",
 				ring: "hsl(var(--ring) / <alpha-value>)",

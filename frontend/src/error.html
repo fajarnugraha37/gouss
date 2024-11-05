@@ -1,12 +1,14 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		%sveltekit.head%
+		<title>%sveltekit.error.message%</title>
 	</head>
 	<body data-sveltekit-preload-data="hover" class="bg-slate-200">
-		<div style="display: contents">%sveltekit.body%</div>
+		<h1>Error</h1>
+		<p>Status: %sveltekit.status%</p>
+		<p>Message: %sveltekit.error.message%</p>
 	</body>
 </html>
