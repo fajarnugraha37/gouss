@@ -8,6 +8,9 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
+		prerender: {
+			handleHttpError: 'warn',
+		},
 		// adapter-auto only supports some environments, see https://svelte.dev/docs/kit/adapter-auto for a list.
 		// If your environment is not supported, or you settled on a specific environment, switch out the adapter.
 		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
@@ -15,13 +18,22 @@ const config = {
 			pages: '../backend/assets/public',
 			assets: '../backend/assets/public',
 			fallback: undefined,
-			precompress: false,
+			precompress: true,
 			strict: true,
 		}),
 		alias: {
 			"@/*": "./src/lib/*",
+		},
+		csp: {
+			directives: {
+				'script-src': ['self']
+			},
+			reportOnly: {
+				'script-src': ['self'],
+				'report-uri': ['/']
+			}
 		}
-	}
+	},
 };
 
 export default config;
